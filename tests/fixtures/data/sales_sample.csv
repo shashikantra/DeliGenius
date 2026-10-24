@@ -1,0 +1,6 @@
+# SYNTHETIC - replace with real export
+date,sku,description,qty,unit_price,total
+2026-10-01,SKU001,Whole milk 1gal,12,4.29,51.48
+2026-10-01,SKU002,Sourdough loaf,8,5.99,47.92
+2026-10-02,SKU001,Whole milk 1gal,15,4.29,64.35
+2026-10-02,SKU003,American cheese lb,6,6.49,38.94

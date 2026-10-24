@@ -1,0 +1,30 @@
+version: 1
+parsers:
+  pdf:
+    min_text_chars_for_ocr: 40
+    heading_size_ratio: 1.15
+    ocr_dpi: 200
+  docx:
+    keep_empty_paragraphs: false
+  xlsx:
+    max_rows_per_chunk_group: 200
+  csv:
+    rows_per_group: 200
+    # Header detection: the parser looks for the first row where at least
+    # `min_keyword_matches` cells match one of these keywords (case-insensitive).
+    header_keywords: [upc, name, qty, quantity, amount, total, department,
+                      description, stock, sku, date, price, threshold]
+    min_keyword_matches: 2
+    # Explicit overrides when auto-detection fails for a specific file pattern.
+    # Keys are exact filenames; values are rows to skip before the header.
+    skip_rows_overrides: {}
+  sales_csv:
+    # Names that indicate category-total rows (UPC empty + Name in this list).
+    category_labels: [misc., misc, drinks, ice cream, sandwich, water, snacks,
+                      vapes, roses, coffee & tea, cigarettes, candy, grocery]
+  ria:
+    # Column header names expected in the RIA Account Overview / Detail tables.
+    overview_table_keywords: [previous balance, mt send, ach, total balance]
+    detail_table_keywords: [date, activity, ref no, amount, fee, tax, comm]
+  lottery:
+    enabled: false

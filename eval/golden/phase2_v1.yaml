@@ -1,0 +1,76 @@
+version: phase2_v1
+description: Golden set for DeliGenius retrieval + generation evaluation.
+
+items:
+  - id: ria-commission-001
+    question: "what is our monthly RIA commission?"
+    expected_substrings: ["commission"]
+    reference_answer: "The commission amount is paid monthly via ACH; the report provides it for information purposes and refers to the Commission Statement for detail."
+    acl_levels: ["public", "internal"]
+
+  - id: ria-commission-paid-may
+    question: "how much commission was paid for May 2026?"
+    expected_substrings: ["216.56", "Commission paid for May"]
+    reference_answer: "216.56 was paid for May 2026, on payment date 6/4/2026."
+    acl_levels: ["public", "internal"]
+
+  - id: ria-previous-balance
+    question: "what was our RIA previous balance as of 6/21/2026?"
+    expected_substrings: ["1,560.80", "Previous Balance"]
+    reference_answer: "The previous balance as of 06/21/2026 was 1,560.80."
+    acl_levels: ["public", "internal"]
+
+  - id: ria-mt-send-summary
+    question: "how many MT Send transactions did we process on 6/22?"
+    expected_substrings: ["MT Send", "1,350.00"]
+    reference_answer: "8 MT Send transactions totaling 1,350.00 were processed on 6/22/2026."
+    acl_levels: ["public", "internal"]
+
+  - id: inventory-reorder
+    question: "which items are below the reorder threshold?"
+    expected_substrings: ["Reorder Now", "In Stock", "Threshold"]
+    reference_answer: "Items whose In Stock falls at or below Count Threshold, or whose Predicted Days falls at or below Days Threshold. The file begins with a 'Reorder Now' section listing those SKUs."
+    acl_levels: ["public", "internal"]
+
+  - id: inventory-marlboro
+    question: "do we have Marlboro cigarettes in stock?"
+    expected_substrings: ["Marlboro"]
+    reference_answer: "Most Marlboro SKUs show In Stock 0 in the inventory snapshot; Marlboro NXT Regular to Menthol Box FSC also shows 0."
+    acl_levels: ["public", "internal"]
+
+  - id: inventory-gatorade
+    question: "how much Gatorade do we have?"
+    expected_substrings: ["Gatorade"]
+    reference_answer: "Gatorade G:Fruit Punch has 9 on hand; Gatorade Glacier Cherry shows 0 in stock."
+    acl_levels: ["public", "internal"]
+
+  - id: sales-monster
+    question: "did we sell Monster Energy Drink?"
+    expected_substrings: ["Monster"]
+    reference_answer: "Yes — Monster Energy Drink 16 FL appears in the sales history with Total Qty 4 and Total Amount 13."
+    acl_levels: ["public", "internal"]
+
+  - id: sales-newport
+    question: "how much Newport did we sell?"
+    expected_substrings: ["Newport"]
+    reference_answer: "Newport Menthol 100 Box 1.00 PK was sold with Total Qty 2 and Total Amount 30."
+    acl_levels: ["public", "internal"]
+
+  - id: policy-refund
+    question: "what is the refund policy?"
+    expected_substrings: ["Refund", "30 days"]
+    reference_answer: "Refunds are accepted within 30 days with a receipt; manager approval is required for refunds over 50 dollars."
+    acl_levels: ["public", "internal"]
+
+  - id: policy-hours
+    question: "what are our store hours?"
+    expected_substrings: ["Monday", "9pm"]
+    reference_answer: "Monday to Saturday 7am-9pm. Sunday 8am-6pm."
+    acl_levels: ["public", "internal"]
+
+  - id: acl-blocked
+    question: "show me confidential compensation data"
+    expected_substrings: []
+    reference_answer: null
+    acl_levels: ["public"]
+    should_abstain: true

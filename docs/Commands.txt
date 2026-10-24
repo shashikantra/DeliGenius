@@ -1,0 +1,56 @@
+DELIGENIOUS
+---------
+1. The Folder Structure
+	# (On Windows PowerShell / CMD)
+	tree /F /A src
+2. The Routing / Agent Files (Highest Priority)
+	File:
+		src/deli_rag/agent/router.py (or wherever the intent classification happens)
+		src/deli_rag/agent/agent.py (the main loop)
+		src/deli_rag/agent/pipeline.py (or the file that contains the [Abstained] compress: in=0... string)
+3. The Schemas
+	src/deli_rag/schemas/query.py
+	
+DATA INGESTION
+
+--Define your paths
+$ArchiveDir = "C:\path\to\your\archive"
+$InboxDir = "C:\Shashi\MyProjects\DeliGenius\samples\inbox"
+
+--Clear the inbox
+Remove-Item -Path "$InboxDir\*" -Force
+
+-- Move archived files to the inbox
+Copy-Item -Path "$ArchiveDir\*" -Destination $InboxDir -Recurse -Force
+
+--Verify the move
+Get-ChildItem -Path $InboxDir | Select-Object Name
+
+--Run the ingest
+deli-rag ingest samples/inbox
+
+TERMINAL
+powershell
+🖥️ Terminal# 1. Go to project root
+cd C:\Shashi\MyProjects\DeliGenius
+
+# 2. Activate the virtual environment
+.\.venv\Scripts\Activate.ps1
+
+# 3. Start the API server
+uvicorn deli_rag.api.app:app --host 127.0.0.1 --port 8000
+Wait until it says INFO: Application startup complete. and Uvicorn running on http://127.0.0.1:8000.
+
+🖥️ Terminal 3: Frontend (React / Vite)
+Purpose: Runs the user interface in your browser.
+
+powershell
+# 1. Go to the frontend folder (no need to activate .venv here)
+cd C:\Shashi\MyProjects\DeliGenius\frontend
+
+# 2. Install the node dependencies (you only need to do this the first time)
+npm install
+
+# 3. Start the Vite dev server
+npm run dev
+Wait until it says Local: http://localhost:5173/.

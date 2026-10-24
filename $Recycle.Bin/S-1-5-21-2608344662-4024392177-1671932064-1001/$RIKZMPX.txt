@@ -1,0 +1,47 @@
+1.Create Youtube Channel
+	Name Promp :I am Creating brand new Youtube Channel in the history niche 
+			and i need you to give me 10 suggessions of channel Name which is unique and easy to remember.and it should have "History" word in it.
+			You can take inspirations fromthe name "Begining to now", "Fire of learning" , "Voices of the past"
+
+	Desciption: Now i need a channel description formy new Channel "----"
+				Make the description engaging and include a lot of keywords 
+				related to the history niche to give the channel a better SEO.
+				dont make longer than 100 to 150 words.
+
+	Profile Picture: Create a proffational design idea for a profile picture for the		
+			Channel.i want the image tobe realted to Histoy.
+			~Turn Design ideas into text promp
+
+	Keyword Prompt: Give me some suggessions of good keywordsn which i can use to my 
+					newly created History niche to improve my Channels SEO
+					
+2. Competetor
+
+2.  Prompt : i will give you the first paragraph of my Youtuve channel.
+			 i want you to make it more engaging, intresting without shortening
+			 the lenght of it all
+			 cenematic intenses
+			 consistant charecters
+			 
+Image Prompt:
+
+			We are goingto play a video where you are my Impage prompt
+			generator.i have a script for a youtube video about the history of India and i needyou to create image prompts for the visuals toit
+			This is how the video works.I am going to paste one paragraph from my script at a time and you are going too
+			turn that paragraph into five Impage prompts. i can use in Leonardo AI, It's 
+			important the imag prompts match the storyline and topic
+			The image should be realistic nad need to have vibe of ancient India
+			
+			"A serene forest landscape, trees swaying gently in the breeze, 
+			camera slowly panning from left to right." You can also select a Motion Control preset to guide the animation. 
+			Remember to be specific and describe your scene as much as possible for better results.
+			
+			
+Music Prompt:
+			I am currently creating a history documentory about the entire history of India.
+			The documentorywill beposted on Youtube and should appeal
+			to a broad audience.Canyou give me some suggessions of
+			what kind of musici should use to get the best possible result
+			
+			
+			
